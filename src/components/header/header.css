@@ -1,0 +1,56 @@
+/* src/components/header/header.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.hero-section {
+    width: 100vw; /* Полная ширина экрана */
+    height: 100vh; /* Полная высота экрана */
+    background: url('../../../public/assets/images/header-background.png') no-repeat center center/cover;
+    height: 760px;
+    color: white;
+    text-align: center;
+    /* font-family: ; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+image{
+    background-size: cover;
+
+}
+.hero-section h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.hero-section p {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.hero-section button {
+    padding: 10px 20px;
+    background-color: orange;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 250px;
+    border-radius: 10px;
+}
+
+
+.highlight {
+    background-color: #ffd700;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
+    transform: rotate(-10deg);
+    display: inline-block;
+    font-weight: bold;
+    box-shadow: 4px 4px 1px 1px #0DB4B6;
+}
