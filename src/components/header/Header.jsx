@@ -6,7 +6,7 @@ const Header = () => {
         <header className="hero-section">
             <h1>Изучи и <span className="highlight">пойми</span> <br /> Искусственный интеллект</h1>
             <p>Смотри материал когда захочешь и где захочешь</p>
-            <button>Подробнее</button>
+            <button><a href="#courses"> Подробнее</a></button>
         </header>
     );
 };

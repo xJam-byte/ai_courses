@@ -87,7 +87,7 @@ const Carousel = () => {
   
 
   return (
-    <div className="product wrapper">
+    <div id="courses" className="product wrapper">
       <button onClick={handlePrevSlide} className="pre-btn">
         <img src="assets/arrow.png" alt="" />
       </button>
