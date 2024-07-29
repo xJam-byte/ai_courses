@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function MeBlock() {
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => setInnerWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <div className="wrapper me-block">
       <div className="left-block">
-        <img src="/assets/images/me.png" alt="my_image" />
+        <img src={innerWidth <= 1024 ?"/assets/images/me2.png" :"/assets/images/me.png"} alt="my_image" />
       </div>
       <div className="right-block">
         <h2>Я Айгерим - Iuna</h2>

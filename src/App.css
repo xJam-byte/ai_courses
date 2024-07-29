@@ -171,40 +171,67 @@ a{
 }
 .me-block p{
   font-size: 18px;
-  width: 700px;
+  width: 90vw;
 }
 .me-block h2{
   font-size: 36px;
+  width: 100vw;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .me-block {
     margin: auto;
     margin-top: 80px;
     flex-direction: column;
     align-items: center;
-    text-align: center;
   }
   .me-block img{
     width: 100vw;
-    
   }
 
   .me-block .left-block {
     margin-bottom: 20px;
+    width: 100vw;
   }
 
   .me-block .right-block {
-    margin-left: 0;
     max-width: 80%;
+    
   }
 
   .me-block p {
-    font-size: 16px;
+    font-size: 28px;
     width: 100%;
   }
 
   .me-block h2 {
-    font-size: 28px;
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 769px) {
+  .me-block .right-block{
+    position: relative;
+  }
+  .me-block h2{
+    font-size: 40px;
+  }
+  .me-block p{
+    font-size: 22px;
+  }
+}
+@media (max-width: 426px) {
+  .me-block .right-block{
+    margin-left: 0;
+    position: relative;
+    left: -30%;
+  }
+  .me-block h2{
+    font-size: 30px;
+    width: 100vw;
+  }
+  .me-block p{
+    font-size: 18px;
+    width: 90vw;
   }
 }
 
@@ -213,6 +240,7 @@ a{
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .my_mission-block .sub-title{
   font-weight: 600;
