@@ -79,10 +79,12 @@ const Carousel = () => {
   };
 
   const handlePurchase = (text) => {
-    const message = encodeURIComponent(`Здравствуйте, я хочу приобрести "${text}".`);
-    const whatsappUrl = `https://wa.me/+77783550947/?text=${message}`;
+    const message = `Здравствуйте, я хочу приобрести "${text}".`;
+    console.log(encodeURIComponent(message));
+    const whatsappUrl = `https://wa.me/+77021032054/?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
+  
 
   return (
     <div className="product wrapper">

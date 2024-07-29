@@ -5,12 +5,17 @@ body, html {
   width: 100vw;
   height: 100vh;
   font-family: 'BAHNSCHRIFT', sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 .wrapper{
   margin: auto;
   width: 80%;
 }
-
+a{
+  color: white;
+  text-decoration: none;
+}
 
 
 .statistics {
@@ -310,6 +315,24 @@ body, html {
 
 }
 
+@media (max-width: 1025px) {
+  .product-card {
+    flex: 0 0 auto;
+    width: 70%;
+    height: 50vh;
+    margin-right: 70px;
+  }
+  .product-container {
+    height: 500px;
+  }
+  .product {
+    padding: 0 20px;
+  }
+  .product-thumb {
+    border-radius: 20px;
+  }
+}
+
 .product-image {
   position: relative;
   width: 100%;
@@ -392,8 +415,12 @@ body, html {
   border: none;
   color: #fff;
   font-size: 16px;
+  margin-top: 10px; 
+  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
 }
+
 
 /*  */
 
@@ -430,16 +457,6 @@ body, html {
 
 .modal p {
   margin-top: 10px; /* Adjusted margin for better spacing */
-}
-
-.moreBTN {
-  margin-top: 10px; /* Adjusted margin for better spacing */
-  padding: 10px 20px;
-  background-color: #ffa500;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 .moreBTN:hover {
@@ -527,7 +544,7 @@ body, html {
   }
 
   .moreBTN {
-    width: 100%;
+    width: 60%;
   }
 }
 
@@ -537,7 +554,8 @@ body, html {
   display: flex;
   margin-top: 80px;
   flex-direction: column;
-  margin-left: 40px;
+  align-items: center;
+  /* margin-left: 40px; */
 }
 .catsBlock .topBlock{
   display: flex;
@@ -570,96 +588,36 @@ body, html {
 }
 
 .catsBlock h2{
-  margin: auto;
   font-size: 36px;
   color: #fff;
 
 }
+.catsBlock .bottomBlock .rightBlock img{
+  width: 26.2%;
+  margin: 0 10px;
+}
 .catsBlock .bottomBlock .rightBlock{
+  display: flex;
   margin-left: 15px;
+}
+.catsBlock .bottomBlock .leftBlock{
+  margin-left: -115px;
 }
 .catsBlock .bottomBlock{
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
+  
+}
+
+
+.slider-wrapper {
+  display: none;
 }
 /* Media Queries for responsiveness */
-@media (max-width: 1200px) {
-  .topBlock, .bottomBlock {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .middleBlock .top img, .middleBlock .bottom img {
-    width: 45%;
-    margin: 5px 0;
-  }
-}
 
-@media (max-width: 1024px) {
-  .catsBlock h2 {
-    font-size: 28px;
-  }
-
-  .topBlock, .bottomBlock {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .topBlock > div, .bottomBlock > div {
-    width: 45%;
-    margin: 5px 0;
-  }
-
-  .middleBlock .top, .middleBlock .bottom {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .middleBlock .top img, .middleBlock .bottom img {
-    width: 45%;
-  }
-  .middleBlock .top img, .middleBlock .bottom img, .topBlock img, .bottomBlock img {
-    width: 400px;
-    height: 300px; /* Set fixed height for all images */
-    margin: 10px 0;
-  }
-  .nigga img{
-    display: none;
-  }
-}
-
-@media (max-width: 767px) {
-  .catsBlock h2 {
-    font-size: 28px;
-  }
-
-  .topBlock, .bottomBlock {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .topBlock > div, .bottomBlock > div {
-    width: 90%;
-    margin: 5px 0;
-  }
-
-  .middleBlock .top, .middleBlock .bottom {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .middleBlock .top img, .middleBlock .bottom img, .topBlock img, .bottomBlock img {
-    width: 90%;
-    height: 300px; /* Set fixed height for all images */
-    margin: 10px 0;
-  }
-
-  img {
-    height: auto;
-  }
-}
-
+/* --------------------------------------------------------------------------------------------- */
 footer span{
   margin-left: 10px;
 }
@@ -713,5 +671,21 @@ footer .block{
   .mediablock img{
     width: 20px;
     height: 20px;
+  }
+}
+@media (max-width: 426px) {
+  footer .block {
+    padding: 10px;
+  }
+  footer .block h2{
+    font-size: 28px;
+  }
+}
+@media (max-width: 376px) {
+  footer .block {
+    padding: 20px;
+  }
+  footer .block h2{
+    font-size: 22px;
   }
 }
