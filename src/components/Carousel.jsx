@@ -8,9 +8,9 @@ const Carousel = () => {
       text: "Авторский курс",
       title: "Авторский курс по ИИ",
       paragraph1:
-        "Курс без наставничества, рассчитанный на самостоятельное обучение Стоимость: 23 тысячи тенге В стоймость входит основной материал и видео",
+        "Курс без наставничества, рассчитанный на самостоятельное обучение Стоимость: 10 тысячи тенге В стоймость входит основной материал и видео",
       paragraph2:
-        "Курс с наставничеством Длительность : две недели Стоимость: 30 тысяч тенге В стоймость входит основной материал, видео, сертификат, онлайн созвон по зум индивидуально 1 раз",
+        "ГАЙД",
     },
     {
       id: 2,
@@ -110,7 +110,7 @@ const Carousel = () => {
         ))}
       </div>
       {showModal && (
-        <div className="modal active" onClick={closeModal}>
+        <div className="modal active">
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="imgblock">
               <img
@@ -120,11 +120,12 @@ const Carousel = () => {
                 alt={selectedSlide.text}
               />
             </div>
-            <div className="infoBlock" onClick={closeModal}>
+            <div className="infoBlock">
               <h3>{selectedSlide.text}</h3>
               <p>{selectedSlide.paragraph1}</p>
-              <p>{selectedSlide.paragraph2}</p>
+              <p><a target="_blank" style={{color: "black"}} href="https://share.minicoursegenerator.com/-638586047885003323/0" rel="noreferrer">{selectedSlide.paragraph2}</a></p>
               <button onClick={() => handlePurchase(selectedSlide.text)} className="moreBTN">Приобрести</button>
+              <button onClick={closeModal} className="moreBTN">X</button>
             </div>
           </div>
         </div>
