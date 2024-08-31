@@ -474,6 +474,7 @@ a{
   padding: 10px; /* Added padding for better spacing */
   visibility: hidden;
   transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+  z-index: 999;
 }
 
 .modal.active {
