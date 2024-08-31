@@ -8,7 +8,7 @@ function MeBlock() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
-    <div className="wrapper me-block">
+    <div className="wrapper me-block info-block">
       <div className="left-block">
         <img src={innerWidth <= 1024 ?"/assets/images/me2.png" :"/assets/images/me.png"} alt="my_image" />
       </div>

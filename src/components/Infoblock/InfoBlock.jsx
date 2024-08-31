@@ -4,7 +4,7 @@ import MeBlock from './MeBlock'
 
 function InfoBlock() {
   return (
-    <div className="wrapper">
+    <div className="wrapper ">
         <Statistics />
         <MeBlock />
       </div>

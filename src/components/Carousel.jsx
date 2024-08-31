@@ -124,8 +124,10 @@ const Carousel = () => {
               <h3>{selectedSlide.text}</h3>
               <p>{selectedSlide.paragraph1}</p>
               <p><a target="_blank" style={{color: "black"}} href="https://share.minicoursegenerator.com/-638586047885003323/0" rel="noreferrer">{selectedSlide.paragraph2}</a></p>
-              <button onClick={() => handlePurchase(selectedSlide.text)} className="moreBTN">Приобрести</button>
-              <button onClick={closeModal} className="moreBTN">X</button>
+              <div className="modal-btn-block">
+                <button onClick={closeModal} className="moreBTN">X</button>
+                <button onClick={() => handlePurchase(selectedSlide.text)} className="moreBTN">Приобрести</button>
+              </div>
             </div>
           </div>
         </div>

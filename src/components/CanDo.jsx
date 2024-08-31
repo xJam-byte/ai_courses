@@ -99,9 +99,9 @@ function CanDo() {
             <button onClick={handleNextSlide} className="nxt-btn">
               {/* <img src="/assets/arrow.png" alt="next" /> */}
             </button>
-            <div className="product-container" ref={containerRef}>
+            <div className="product-container" style={{height: 600}} ref={containerRef}>
               <div className="product-card">
-                <div style={{ height: 600 }} className="product-image">
+                <div style={{ width: 400 , height: 600 }} className="product-image">
                   <img
                     src="/assets/images/cats/top/1.png"
                     alt="cat1"
@@ -118,6 +118,7 @@ function CanDo() {
                   flexWrap: "wrap",
                   width: 1300,
                   height: 600,
+                  marginLeft: innerWidth > 426 ? "10%" : 200
                 }}
               >
                 <div
@@ -178,7 +179,7 @@ function CanDo() {
                 </div>
               </div>
               <div className="product-card" style={{ marginLeft: -100 }}>
-                <div style={{ height: 600 }} className="product-image">
+                <div style={{ width: 400 , height: 600 }} className="product-image">
                   <img
                     src="/assets/images/cats/top/7.png"
                     alt="cat1"
@@ -186,19 +187,8 @@ function CanDo() {
                   />
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="product wrapper">
-            <button onClick={handlePrevSlide} className="pre-btn">
-              {/* <img src="assets/arrow.png" alt="" /> */}
-            </button>
-            <button onClick={handleNextSlide} className="nxt-btn">
-              {/* <img src="assets/arrow.png" alt="" /> */}
-            </button>
-            <div className="product-container" ref={containerRef}>
-              <div className="product-card">
-                <div style={{ height: 600 }} className="product-image">
+                          <div className="product-card">
+                <div style={{width: 400, marginLeft: innerWidth <= 375 ? 300 : 200, height: 600 }} className="product-image">
                   <img
                     src="/assets/images/cats/bottom/1.png"
                     className="product-thumb"
@@ -208,7 +198,7 @@ function CanDo() {
               </div>
 
               <div className="product-card">
-                <div style={{ height: 600 }} className="product-image">
+                <div style={{ width: 400, marginLeft: innerWidth <= 375 ? 600 : 400,height: 600 }} className="product-image">
                   <img
                     src="/assets/images/cats/bottom/2.jpg"
                     className="product-thumb"
@@ -218,7 +208,7 @@ function CanDo() {
               </div>
 
               <div className="product-card">
-                <div style={{ height: 600 }} className="product-image">
+                <div style={{ width: 400, marginLeft: innerWidth <= 375 ? 900 : 600,height: 600 }} className="product-image">
                   <img
                     src="/assets/images/cats/bottom/3.jpg"
                     className="product-thumb"
@@ -228,7 +218,7 @@ function CanDo() {
               </div>
 
               <div className="product-card">
-                <div style={{ height: 600 }} className="product-image">
+                <div style={{ width: 400, marginLeft: innerWidth <= 375 ? 1200 : 800,height: 600 }} className="product-image">
                   <img
                     src="/assets/images/cats/bottom/4.jpg"
                     className="product-thumb"
@@ -237,15 +227,6 @@ function CanDo() {
                 </div>
               </div>
               
-              <div className="product-card">
-                <div style={{ height: 600 }} className="product-image">
-                  <img
-                    src="/assets/images/cats/bottom/4.jpg"
-                    className="product-thumb"
-                    alt=""
-                  />
-                </div>
-              </div>
             </div>
           </div>
         </>
